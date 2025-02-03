@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    
+
+    <main>
+        <section id="profile">
+            <h2>PROFILE</h2>
+            <div class="profile-info">
+                <p><strong>Name:</strong> DHANYATHA K</p>
+                <p><strong>Roll Number:</strong> 7376221CS136</p>
+                <p><strong>Lab Name:</strong> ARTIFICIAL INTELLIGENCE - TECHNOLOGIES</p>
+                <p><strong>Lab ID:</strong> SLB065</p>
+                <p><strong>Phone No:</strong> 9500214976</p>
+                
+            </div>
+
+            <div class="team-details">
+                <h3>TEAM DETAILS</h3>
+                <p>No team details available yet.</p>
+            </div>
+
+            <div class="work-log">
+                <h3>WORK LOG UPDATE</h3>
+                <p>No work log updates available yet.</p>
+                <button onclick="openWorkLogModal()">UPDATE</button>
+            </div>
+        </section>
+
+        <div id="work-log-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeWorkLogModal()">&times;</span>
+                <h3>Update Work Log</h3>
+                <textarea id="work-log-text" placeholder="Type your work log here (max 500 words)..."></textarea>
+                <button id="save-work-log">Save</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function updateProfile() {
+            alert('Profile update functionality goes here.');
+        }
+
+        function openWorkLogModal() {
+            document.getElementById('work-log-modal').style.display = 'flex';
+        }
+
+        function closeWorkLogModal() {
+            document.getElementById('work-log-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

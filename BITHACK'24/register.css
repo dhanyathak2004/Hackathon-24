@@ -1,0 +1,108 @@
+/* Basic Reset */
+body, h1, form, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling in the body */
+    position: relative; /* Required for background image positioning */
+}
+
+main {
+    background: #ffffff46;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    position: relative; /* Ensure the form is above the background image */
+    z-index: 1; /* Place the form above the background */
+    overflow-y: auto; /* Allow scrolling within the main container */
+    max-height: 90vh; /* Limit the height to allow scrolling */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0f0e0e;
+    border-radius: 5px;
+}
+
+button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #080808;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Team members styling */
+.team-member {
+    margin-bottom: 10px;
+}
+
+.team-member input {
+    margin-right: 10px;
+}
+
+#team-members {
+    margin-top: 20px;
+}
+
+/* Background Image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.pond5.com/night-starry-sky-moving-smoke-footage-094815918_iconl.jpeg') no-repeat center center;
+    background-size: cover;
+    animation: moveBackground 120s linear infinite;
+    z-index: 0; /* Ensure background is below the content */
+    opacity: 0.7; /* Adjust opacity for better contrast with text */
+}
+
+/* Animation for Background Image */
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}

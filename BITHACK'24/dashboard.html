@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BIT HACK'24</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.bitsathy.ac.in/wp-content/themes/baiotsathycollege/assets/images/header%2006.png" alt="BIT Logo">
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('problem-statements')">Problem Statement</a></li>
+                <li><a href="profile.html" onclick="showSection('profile')">Profile</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home" class="content">
+            <h1>Welcome to BIT HACK'24</h1>
+        </div>
+
+        <div id="about" class="content" style="display: none;">
+            <div class="about-container">
+                <h2>ABOUT BIT HACK'24</h2>
+                <p>
+                    BIT HACK'24 is an exciting annual hackathon organized by the Bannari Amman Institute of Technology. It brings together enthusiastic developers, designers, and innovators to collaborate and solve real-world problems through creative technology solutions.
+                </p>
+                <h3>Event Highlights</h3>
+                <ul>
+                    <li>24-hour hacking marathon</li>
+                    <li>Workshops and mentoring sessions</li>
+                    <li>Networking opportunities with industry experts</li>
+                    <li>Prizes for top teams and projects</li>
+                </ul>
+                <h3>Organizers</h3>
+                <p>
+                    The event is organized by the dedicated team at the Bannari Amman Institute of Technology, with support from industry partners and sponsors.
+                </p>
+            </div>
+        </div>
+
+        <div id="problem-statements" class="content" style="display: none;">
+            <div class="problem-container">
+                <h2>CHOOSE CATEGORY</h2>
+                <div class="button-group">
+                    <a href="#" class="btn btn-primary" onclick="showProblemSection('software')">SOFTWARE</a>
+                    <a href="#" class="btn btn-secondary" onclick="showProblemSection('hardware')">HARDWARE</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="software" class="content" style="display: none;">
+            <div class="domain-container">
+                <h2>CHOOSE DOMAIN</h2>
+                <div class="button-grid">
+                    <a href="cloud.html" class="btn btn-domain" onclick="showDomain('cloud')">CLOUD</a>
+                    <a href="#" class="btn btn-domain" onclick="showDomain('web-development')">WEB DEVELOPMENT</a>
+                    <a href="#" class="btn btn-domain" onclick="showDomain('full-stack')">FULL STACK</a>
+                    <a href="#" class="btn btn-domain" onclick="showDomain('blockchain')">BLOCKCHAIN</a>
+                    <a href="#" class="btn btn-domain" onclick="showDomain('nlp')">NLP</a>
+                    <a href="#" class="btn btn-domain" onclick="showDomain('qt')">QT</a>
+                </div>
+            </div>
+        </div>
+    
+
+       
+        
+        
+        <div id="profile" class="content" style="display: none;">
+            <h2>Profile</h2>
+            <p>Details about the user's profile...</p>
+        </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

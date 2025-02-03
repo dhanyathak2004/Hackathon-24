@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - BIT HACK'24</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="register.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Register</h1>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rollno">Roll No:</label>
+                <input type="text" id="rollno" name="rollno" required>
+            </div>
+
+            <div class="form-group">
+                <label for="num-students">Number of Students:</label>
+                <select id="num-students" name="num-students" required>
+                    <option value="" disabled selected>Select number</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="team-name">Team Name:</label>
+                <input type="text" id="team-name" name="team-name" required>
+            </div>
+
+            <div id="team-members">
+                <!-- Team members will be added here dynamically -->
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <button onclick="goBack()" class="btn">GO BACK</button>
+    </main>
+</body>
+</html>
+<script>
+    document.getElementById('num-students').addEventListener('change', function() {
+        const numStudents = parseInt(this.value);
+        const teamMembersContainer = document.getElementById('team-members');
+        
+        // Clear existing team members fields
+        teamMembersContainer.innerHTML = '';
+        
+        // Add new team members fields
+        for (let i = 0; i < numStudents; i++) {
+            const memberDiv = document.createElement('div');
+            memberDiv.className = 'team-member';
+            memberDiv.innerHTML = `
+                <label>Team Member ${i + 1} Name</label>
+                <input type="text" name="member-name-${i + 1}" required>
+                <label>Team Member ${i + 1} Roll No</label>
+                <input type="text" name="member-rollno-${i + 1}" required>
+                <label>Team Member ${i + 1} Phone No</label>
+                <input type="text" name="member-phone-${i + 1}" required>
+                <label>Special Lab</label>
+                <input type="text" name="member-special-lab-${i + 1}">
+            `;
+            teamMembersContainer.appendChild(memberDiv);
+        }
+    });
+    </script>
+    
